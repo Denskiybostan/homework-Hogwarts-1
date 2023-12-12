@@ -1,16 +1,11 @@
-public class Kogtevran {
-    public int magicPower;
-    public int transgression;
-    public String name;
+public class Kogtevran extends Hogwarts {
     public int smart;
     public int wise;
     public int wit;
     public int creation;
 
     public Kogtevran(String name, int magicPower, int transgression, int smart, int wise, int wit, int creation) {
-        this.name = name;
-        this.magicPower = magicPower;
-        this.transgression = transgression;
+        super(name, magicPower, transgression);
         this.smart = smart;
         this.wise = wise;
         this.wit = wit;
@@ -49,36 +44,13 @@ public class Kogtevran {
         this.creation = creation;
     }
 
-    public int getMagicPower() {
-        return magicPower;
-    }
-
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public int getTransgression() {
-        return transgression;
-    }
-
-    public void setTransgression(int transgression) {
-        this.transgression = transgression;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
-        return "Kogtevran{" +
-                "magicPower=" + magicPower +
-                ", transgression=" + transgression +
-                ", name='" + name + '\'' +
+        return "Kogtevran{" + super.toString() +
+                "smart=" + smart +
+                ", wise=" + wise +
+                ", wit=" + wit +
+                ", creation=" + creation +
                 '}';
     }
 

@@ -1,33 +1,16 @@
-public class Griffindor {
-    public String name;
-    public int magicPower;
-    public int transgression;
+public class Griffindor extends Hogwarts{
     public int brave;
     public int honor;
     public int nobility;
 
     public Griffindor(String name, int magicPower, int transgression, int brave, int honor, int nobility) {
-        this.magicPower = magicPower;
-        this.transgression = transgression;
-        this.name = name;
+        super(name, magicPower, transgression);
         this.brave = brave;
         this.honor = honor;
         this.nobility = nobility;
     }
 
-    public Griffindor(int magicPower, int transgression) {
-    }
 
-    public Griffindor(String name, int magicPower, int transgression) {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getBrave() {
         return brave;
@@ -53,32 +36,16 @@ public class Griffindor {
         this.nobility = nobility;
     }
 
-    public int getMagicPower() {
-        return magicPower;
-    }
-
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public int getTransgression() {
-        return transgression;
-    }
-
-    public void setTransgression(int transgression) {
-        this.transgression = transgression;
-    }
-
     public int sum() {
         return getBrave() + getHonor() + getNobility();
     }
 
     @Override
     public String toString() {
-        return "Griffindor{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgression=" + transgression +
+        return "Griffindor{" + super.toString() +
+                ", brave=" + brave +
+                ", honor=" + honor +
+                ", nobility=" + nobility +
                 '}';
     }
 

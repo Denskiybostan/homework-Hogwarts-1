@@ -1,7 +1,4 @@
-public class Slizerin{
-    public String name;
-    public int magicPower;
-    public int transgression;
+public class Slizerin extends Hogwarts {
     public int cunning;
     public int determination;
     public int ambition;
@@ -9,9 +6,7 @@ public class Slizerin{
     public int lustForPower;
 
     public Slizerin(String name, int magicPower, int transgression, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
-        this.name = name;
-        this.magicPower = magicPower;
-        this.transgression = transgression;
+        super(name, magicPower, transgression);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
@@ -19,13 +14,6 @@ public class Slizerin{
         this.lustForPower = lustForPower;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getCunning() {
         return cunning;
@@ -67,30 +55,18 @@ public class Slizerin{
         this.lustForPower = lustForPower;
     }
 
-    public int getMagicPower() {
-        return magicPower;
-    }
-
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public int getTransgression() {
-        return transgression;
-    }
-    
-    public void setTransgression(int transgression) {
-        this.transgression = transgression;
-    }
 
     @Override
     public String toString() {
-        return "Slizerin{" +
-                "name='" + name + '\'' +
-                ", magicPower=" + magicPower +
-                ", transgression=" + transgression +
+        return "Slizerin{" + super.toString() +
+                "cunning=" + cunning +
+                ", determination=" + determination +
+                ", ambition=" + ambition +
+                ", resourcefulness=" + resourcefulness +
+                ", lustForPower=" + lustForPower +
                 '}';
     }
+
     public int sum2() {
         return getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getLustForPower();
     }
