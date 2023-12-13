@@ -35,22 +35,6 @@ public class Puffendui extends Hogwarts {
         this.honesty = honesty;
     }
 
-    public int getMagicPower() {
-        return magicPower;
-    }
-
-    public void setMagicPower(int magicPower) {
-        this.magicPower = magicPower;
-    }
-
-    public int getTransgression() {
-        return transgression;
-    }
-
-    public void setTransgression(int transgression) {
-        this.transgression = transgression;
-    }
-
     @Override
     public String toString() {
         return "Puffendui{" + super.toString() +
@@ -60,12 +44,12 @@ public class Puffendui extends Hogwarts {
                 '}';
     }
 
-    public int sum3() {
+    public int sum() {
         return getHardWork() + getLoyalty() + getHonesty();
     }
     public void compare(Puffendui other) {
-        int power6 = sum3();
-        int power7 = other.sum3();
+        int power6 = sum();
+        int power7 = other.sum();
         if (power6 > power7) {
             System.out.println(getName() + " лучший Пуффендуец, чем " + other.getName());
         } else {

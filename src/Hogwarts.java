@@ -1,7 +1,7 @@
 public class Hogwarts {
-    public String name;
-    public int magicPower;
-    public int transgression;
+    private String name;
+    private int magicPower;
+    private int transgression;
 
 
     public String getName() {

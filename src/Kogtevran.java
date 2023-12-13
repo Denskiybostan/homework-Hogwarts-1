@@ -54,13 +54,13 @@ public class Kogtevran extends Hogwarts {
                 '}';
     }
 
-    public int sum1() {
+    public int sum() {
         return getSmart() + getWit() + getWise() + getCreation();
     }
 
     public void compare(Kogtevran other) {
-        int power2 = sum1();
-        int power3 = other.sum1();
+        int power2 = sum();
+        int power3 = other.sum();
         if (power2 > power3) {
             System.out.println(getName() + " лучший Когтевранец, чем " + other.getName());
         } else {

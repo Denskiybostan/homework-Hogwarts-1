@@ -67,12 +67,12 @@ public class Slizerin extends Hogwarts {
                 '}';
     }
 
-    public int sum2() {
+    public int sum() {
         return getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getLustForPower();
     }
     public void compare(Slizerin other) {
-        int power4 = sum2();
-        int power5 = other.sum2();
+        int power4 = sum();
+        int power5 = other.sum();
         if (power4 > power5) {
             System.out.println(getName() + " лучший Слизеринец, чем " + other.getName());
         } else {
